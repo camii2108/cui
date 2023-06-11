@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Inicio'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/headerNavbar') %>
+	<!-- /Header -->
+	
+	<!-- Banner -->
+	<!-- <div class="banner"></div> -->
+
+	<main class="main">
+		<!--==================== HOME ====================-->
+		<section class="home section" id="home">
+			<div class="home__container container grid">
+				<div class="home__data">
+					<h1 class="home__title">
+						New clothing <br>
+						Collection
+					</h1>
+
+					<p class="home__description">
+						The new colletion of clothing from <br>
+						the best brands year.
+					</p>
+					<a href="#new" class="button__link">
+						<i class="ri-arrow-right-line"></i>
+					</a>
+				</div>
+				<div class="home__images">
+					<img src="/images/home/home1.png" alt="home image">
+					<img src="/images/home/home2.png" alt="home image">
+				</div>
+			</div>
+		</section>
+
+		<!--==================== NEW ====================-->
+		<section class="new section" id="new">
+			<h2 class="section__title">
+				Basado en tu última visita
+			</h2>
+
+				<!-- ultima visita -->
+	<div class="container products-wrapper">
+		<div class="row">
+			<!-- Show the "visited" products -->
+			<% visitados.forEach((product) => { %> <!-- cada interacion va  aser un producto -->
+			    <div class="col-12 col-sm-6 col-lg-3">
+				    <section class="product-box">
+					    <a href="/products/detail/<%= product.id %>">
+						    <figure class="product-box_image">
+						    	<img src="/images/products/<%= product.image %>" alt="imagen de producto">
+						    </figure>
+						    <article class="product-box_data">
+							    <h2><%= toThousand(product.price - (product.price * product.discount / 100)) %></h2><!-- include o algo de codigo -->
+<!-- include o algo de codigo -->
+							    <span><%= product.discount %> % OFF</span><!-- varibles -->
+							    <p><%= product.name %></p>
+							    <i class="fas fa-truck"></i>
+						    </article>
+					    </a>
+				    </section>
+			    </div>
+		    <% }) %>
+	</div>
+</section>
+	<!-- /ultima visita -->
+			
+		<!--==================== NEW ====================-->
+		<section class="new section" id="collection">
+			<h2 class="section__title">
+				Productos en ofertas
+			</h2>
+
+	<!-- Ofertas -->
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Ofertas</h2>
+			</div>
+			<!-- Show the "in-sale" products -->
+			<% ofertas.forEach((product) => { %> <!-- cada interacion va  aser un producto -->
+			    <div class="col-12 col-sm-6 col-lg-3">
+				    <section class="product-box">
+					    <a href="/products/detail/<%= product.id %>">
+						    <figure class="product-box_image">
+						    	<img src="/images/products/<%= product.image %>" alt="imagen de producto">
+						    </figure>
+						    <article class="product-box_data">
+							    <h2><%= toThousand(product.price - (product.price * product.discount / 100)) %></h2><!-- include o algo de codigo -->
+							    <span><%= product.discount %> % OFF</span><!-- varibles -->
+							    <p><%= product.name %></p>
+							    <i class="fas fa-truck"></i>
+						    </article>
+					    </a>
+				    </section>
+			    </div>
+		    <% }) %>
+		</div>
+	</div>
+	<!-- /Ofertas -->
+	
+</section>
+	<!-- /ultima visita -->
+
+
+
+						 
+	
+
+		
+		<!--==================== BRANDS ====================-->
+		<section class="brand section">
+			<h2 class="section__title">
+				Brands we sell
+			</h2>
+			<div class="brand__container container grid">
+				<img src="/images/products/logo1.png" alt="logo image" class="brand__img">
+				<img src="/images/products/logo2.png" alt="logo image" class="brand__img">
+				<img src="/images/products/logo3.png" alt="logo image" class="brand__img">
+				<img src="/images/products/logo4.png" alt="logo image" class="brand__img">
+			</div>
+		</section>
+	</main>
+
+	<!-- /Banner -->
+
+	
+	  <!--========== SCROLL UP ==========-->
+	  <a href="#" class="scrollup" id="scroll-up">
+		<i class="ri-arrow-up-line"></i>
+	</a>
+	
+	<!--=============== SCROLLREVEAL ===============-->
+	<script src="/js/scrollreveal.min.js"></script>
+
+	<!--=============== SWIPER JS ===============-->
+	<script src="/js/swiper-bundle.min.js"></script>
+
+	<!--=============== MAIN JS ===============-->
+	<script src="/js/main.js"></script>
+
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
