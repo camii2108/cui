@@ -17,6 +17,10 @@ const controller = {
 			toThousand
 		});
 	},
+	about: (req, res) => {
+		// Do the magic: en vez de mandarlo por send los datos se envian por una vista 
+		res.render('about');
+	},
 	search: (req, res) => {
 		// Do the magic
 		let { keywords } = req.query
