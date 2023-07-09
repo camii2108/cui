@@ -1,43 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
 <!-- Include Head -->
-<%- include('partials/head', {title: 'Todos los productos'}) %>
+<%- include('partials/head', {title: 'Products'}) %>
 <body>
-	<!-- Header -->
-	<%- include('partials/headerNavbar') %>
-	<!-- /Header -->
+  <%- include('partials/headerNavbar', {title: 'Products'}) %>
 
-	<!-- todos los productos -->
-	<div class="container products-wrapper">
-		<div class="row">
-			<div class="col-12">
-				<h2 class="products-title">Todos los productos</h2>
-			</div>
-		<% products.forEach(product => { %>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/products/detail/<%= product.id %>">
-						<figure class="product-box_image">
-							<img src="/images/products/<%= product.image %>" alt="imagen de producto">
-						</figure>
-						<article class="product-box_data">
-							<h2><%= toThousand(product.price - (product.price * product.discount /100)) %></h2>															 
-									<span><%= product.discount %>% OFF</span>							
-								<p><%= product.name %></p>
-							<i class="fas fa-truck"></i>
-						</article>
-					</a>
-				</section>
-			</div>
-		<% }) %>
-			
-		
-		</div>
-	</div>
-	<!-- /todos los productos -->
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+<!-- card products -->
+<% products.forEach((product) => { %>
+  <div class="item">
+    <h1 class="titulo-item"><%= product.name %></h1>
+    <span class="titulo-item"><%= product.name %></span>
+    <img src="/images/products/<%= product.image %>" alt="" class="img-item">
+    <span class="precio-item">$<%= product.price %></span>
+    <button class="boton-item">Agregar al Carrito</button>
+  </div>
+<% }) %>
 
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                  <strong>Tu Total</strong>
+                  <span class="carrito-precio-total">
+                    $120.000,00
+                  </span>
+                </div>
+                <form action="/carrito/pagar" method="POST">
+                  <button type="submit" class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+                </form>
+              </div>
+              
+              
+    </section>
+    
 	<!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->
-</body>	
+    <script src="/js/products.js" ></script> 
+      
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="/js/scrollreveal.min.js"></script>
+    
+      <!--=============== SWIPER JS ===============-->
+      <script src="/js/swiper-bundle.min.js"></script>
+    
+      <!--=============== MAIN JS ===============-->
+      <script src="/js/main.js"></script>
+
+
+</body>
 </html>

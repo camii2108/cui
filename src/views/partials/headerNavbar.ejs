@@ -1,14 +1,17 @@
   <!--==================== HEADER ====================-->
   <header class="header" id="header">
-	<nav class="nav container">
-		<a href="#" class="nav__logo">
+	<div class="main-header">	<nav class="nav container">
+		<a href="/" class="nav__logo">
 			shop
+			<i class="ri-football-line" ></i>
 		</a>
 
 		<div class="col-7 col-md-6">
-			<form action="/search" method="GET" class="search-form">
+			<form action="/search" method="GET" class="search-form-desktop">
+				<div class="search-bar">
 				<input type="text" name="keywords" placeholder="Buscar productos, marcas y más" class="search-form_input">
 				<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+			</div>
 			</form>
 		</div>
 
@@ -36,7 +39,7 @@
 				</li>
 
 				<li class="nav__item">
-					<a href="#products" class="nav__link">
+					<a href="/products/create" class="nav__link">
 						<i class="ri-t-shirt-line"></i>
 						<span>Products</span>
 					</a>
@@ -45,7 +48,13 @@
 		</div>
 		<!-- theme change button -->
 		<i class="ri-moon-line change-theme" id="theme-button"></i>
+		
+		<div class="user-icons-desktop">
+        <a href="/products"><i class="fas fa-shopping-cart"></i></a>
+        </div>  
 	</nav>
+</div>
+
 </header>
 
 <!-- 
