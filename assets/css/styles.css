@@ -634,10 +634,12 @@ padding-bottom: 5rem;
 
   .brand__container{
     grid-template-columns: repeat(4, max-content);
+    max-width: inherit;
   }
   .footer__container{
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
+    max-width: initial;
   }
 }
 
@@ -655,6 +657,7 @@ padding-bottom: 5rem;
   .nav__menu{
     width: initial;
     margin-left: auto;
+    background-color: var(--bg-color);
   }
   .nav__list{
     display: flex;
@@ -684,8 +687,14 @@ padding-bottom: 5rem;
     background-color: transparent;
     box-shadow: none;
   }
+  .home__container, .new__container {
+    grid-template-columns: repeat(4,max-content);
+    justify-content: center;
+    max-width: -webkit-fill-available;
+  }
+}
   .products__container{
-    width: 954px;
+    max-width: 1400px;
   }
   .collection__container {
     position: relative;
@@ -708,6 +717,9 @@ padding-bottom: 5rem;
 }
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+@media screen and (max-width: 1152px){
+  
+}
 
 
 /* For 4K resolutions (3840 x 2160, 4096 x 2160) */
