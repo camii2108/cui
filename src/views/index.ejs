@@ -103,26 +103,20 @@
 	
 </section>
 	<!-- /ultima visita -->
-
-
-
-						 
-	
-
 		
-		<!--==================== BRANDS ====================-->
-		<section class="brand section">
-			<h2 class="section__title">
-				Brands we sell
-			</h2>
-			<div class="brand__container container grid">
-				<img src="/images/products/logo1.png" alt="logo image" class="brand__img">
-				<img src="/images/products/logo2.png" alt="logo image" class="brand__img">
-				<img src="/images/products/logo3.png" alt="logo image" class="brand__img">
-				<img src="/images/products/logo4.png" alt="logo image" class="brand__img">
-			</div>
-		</section>
-	</main>
+	<section class="brand section">
+		<h2 class="section__title">
+		  Brands we sell
+		</h2>
+		<div class="swiper-container brand__container">
+		  <div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="/images/products/logo1.png" alt="logo image" class="brand__img"></div>
+			<div class="swiper-slide"><img src="/images/products/logo2.png" alt="logo image" class="brand__img"></div>
+			<div class="swiper-slide"><img src="/images/products/logo3.png" alt="logo image" class="brand__img"></div>
+			<div class="swiper-slide"><img src="/images/products/logo4.png" alt="logo image" class="brand__img"></div>
+		  </div>
+	  </section>
+	  
 
 	<!-- /Banner -->
 
@@ -141,8 +135,23 @@
 	<!--=============== MAIN JS ===============-->
 	<script src="/js/main.js"></script>
 
+	  <!-- Script para inicializar Swiper -->
+  <script>
+    var swiper = new Swiper('.brand .swiper-container', {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      pagination: {
+        el: '.brand .swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+
+
 	<!-- footer -->
 	<%- include('partials/footer') %>
 	<!-- /footer -->
+
+
 </body>	
 </html>

@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "name": "campera hombre",
-    "price": "10000",
-    "discount": "50",
+    "name": "Campera Hombre",
+    "price": 10000,
+    "discount": 50,
     "category": "visited",
-    "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
+    "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto. En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
     "image": "sacoMen.png"
   },
   {
@@ -20,10 +20,118 @@
   {
     "id": 3,
     "name": "Fondo Mujeres",
-    "price": "45.000",
-    "discount": "20",
+    "price": 45000,
+    "discount": 20,
     "category": "visited",
     "description": "sdasdasdsa",
     "image": "1686457788872-170886369.png"
+  },
+  {
+    "id": 4,
+    "name": "Remera Deportiva",
+    "price": 3500,
+    "discount": 10,
+    "category": "new",
+    "description": "Descripción de la remera deportiva",
+    "image": "./nofoto.png"
+  },
+  {
+    "id": 5,
+    "name": "Shorts Deportivos",
+    "price": 2500,
+    "discount": 15,
+    "category": "new",
+    "description": "Descripción de los shorts deportivos",
+    "image": "shorts-deportivos.png"
+  },
+  {
+    "id": 6,
+    "name": "Pantalón Running",
+    "price": 4500,
+    "discount": 20,
+    "category": "bestseller",
+    "description": "Descripción del pantalón para running",
+    "image": "pantalon-running.png"
+  },
+  {
+    "id": 7,
+    "name": "Top Deportivo",
+    "price": 1800,
+    "discount": 0,
+    "category": "bestseller",
+    "description": "Descripción del top deportivo",
+    "image": "top-deportivo.png"
+  },
+  {
+    "id": 8,
+    "name": "Zapatillas Running",
+    "price": 7500,
+    "discount": 25,
+    "category": "in-sale",
+    "description": "Descripción de las zapatillas para running",
+    "image": "zapatillas-running.png"
+  },
+  {
+    "id": 9,
+    "name": "Leggings Deportivos",
+    "price": 2800,
+    "discount": 10,
+    "category": "visited",
+    "description": "Descripción de los leggings deportivos",
+    "image": "./nofoto.png"
+  },
+  {
+    "id": 10,
+    "name": "Mallas Deportivas",
+    "price": 3200,
+    "discount": 5,
+    "category": "visited",
+    "description": "Descripción de las mallas deportivas",
+    "image": "./nofoto.png"
+  },
+  {
+    "id": 11,
+    "name": "Gorra Running",
+    "price": 1200,
+    "discount": 0,
+    "category": "new",
+    "description": "Descripción de la gorra para running",
+    "image": "gorra-running.png"
+  },
+  {
+    "id": 12,
+    "name": "Calcetines Deportivos",
+    "price": 800,
+    "discount": 0,
+    "category": "new",
+    "description": "Descripción de los calcetines deportivos",
+    "image": "calcetines-deportivos.png"
+  },
+  {
+    "id": 13,
+    "name": "Chaleco Deportivo",
+    "price": 5500,
+    "discount": 15,
+    "category": "new",
+    "description": "Descripción del chaleco deportivo",
+    "image": "chaleco-deportivo.png"
+  },
+  {
+    "id": 14,
+    "name": "Camiseta Deportiva",
+    "price": 3900,
+    "discount": 10,
+    "category": "visited",
+    "description": "Descripción de la camiseta deportiva",
+    "image": "camiseta-deportiva.png"
+  },
+  {
+    "id": 15,
+    "name": "Bolso Deportivo",
+    "price": 6000,
+    "discount": 0,
+    "category": "new",
+    "description": "Descripción del bolso deportivo",
+    "image": "bolso-deportivo.png"
   }
 ]
